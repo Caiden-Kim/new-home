@@ -1,0 +1,227 @@
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    text-align: center;
+
+    background-image: url("background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    user-select: none;
+}
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    animation: background-fade 4s 1 ease;
+}
+
+.title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 3em;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: rgba(0, 0, 0, .4);
+
+    margin: 10px;
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+    animation: title-reveal 4s 1 ease;
+}
+
+.about-me-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+
+    background-color: rgba(0, 0, 0, .7);
+
+    text-align: center;
+
+    margin: 10px;
+
+    padding: 15px;
+    border-radius: .3em;
+
+    animation: text-reveal 4s 1 ease;
+}
+
+.about-me {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 1.2em;
+
+    background-color: rgba(0, 0, 0, .7);
+
+    text-align: center;
+
+    margin: 10px;
+
+    padding: 15px;
+    border-radius: .3em;
+
+    max-width: 60vh;
+
+    animation: text-reveal 4s 1 ease;
+}
+
+.link {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+
+    animation: text-reveal 4s 1 ease;
+}
+
+.button-container {
+    animation: text-reveal 4s 1 ease;
+}
+
+.button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, .7);
+
+    border: none;
+    border-radius: 1em;
+
+    outline: none;
+
+    animation: button-reveal 4s 1 ease;
+
+    transition: color 300ms ease, transform 300ms ease;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(.05em);
+}
+
+.button:focus {
+    background-color: white;
+    color: black;
+    transform: translateY(.05em);
+}
+
+@keyframes title-reveal {
+    0% {
+        transform: translateY(180px);
+
+        padding: none;
+        font-size: 0;
+
+        border-top: 2px solid rgba(0, 0, 0, 0);
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        font-size: 0;
+
+        padding-top: none;
+        padding-bottom: none;
+        padding-left: 200px;
+        padding-right: 200px;
+
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+
+    50% {
+        transform: translateY(180px);
+
+        font-size: 3em;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes text-reveal {
+    0% {
+        transform: translateY(-50px);
+        color: rgba(0, 0, 0, 0);
+
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    70% {
+        color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes button-reveal {
+    0% {
+        color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    70% {
+        color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes background-fade {
+    0% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: none;
+    }
+}
